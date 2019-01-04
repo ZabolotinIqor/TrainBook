@@ -1,0 +1,22 @@
+table{
+  border-collapse: collapse;
+}
+table, th, td {
+  border: 1px solid black;
+}
+td{
+  height: 14px;
+  width: 14px;
+  margin: 0px;
+  padding: 0px;
+
+}
+.table_box{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+p{
+  margin-bottom:0px;
+}

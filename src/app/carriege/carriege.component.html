@@ -1,0 +1,28 @@
+<div class="table_box">
+  <table>
+    <tr *ngFor="let w of width; index as i">
+      <td *ngFor="let h of height; index as j">
+        <app-seat *ngIf='checkCoordinates(i,j)' [condition]='this.condition' [place]='this.place'></app-seat>
+      </td>
+    </tr>
+  </table>
+</div>
+<div style="display: flex;align-items: center; justify-content: space-between;  width: 80%;margin-left: 180px;">
+  <div style="background: #63B5F4;width: 14px;height: 14px;" ></div>
+  <p>free</p>
+  <div style="background: #717073;width: 14px;height: 14px;"></div>
+  <p>busy</p>
+  <div style="background: #962E40;width: 14px;height: 14px;"></div>
+  <p>tmp booked</p>
+  <div style="background: #EB313E;width: 14px;height: 14px;"></div>
+  <p>int booked</p>
+  <div style="background: #1D2226 ;width: 14px;height: 14px;"></div>
+  <p>conditionally closed</p>
+  <div style="background: #00010D;width: 14px;height: 14px;"></div>
+  <p>closed</p>
+  <div style="background: #88959D;width: 14px;height: 14px;"></div>
+  <p>enc closed</p>
+  <div style="background: #FF6F00;width: 14px;height: 14px;"></div>
+  <p>for offline ticket</p>
+</div>
+

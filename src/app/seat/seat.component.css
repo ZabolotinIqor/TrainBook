@@ -1,0 +1,27 @@
+.free{
+  background: #63B5F4;
+}
+.free:hover{
+  outline: 2px solid #12a750;
+}
+.busy{
+  background: #717073;
+}
+.tmp-booked{
+  background: #962E40;
+}
+.int-booked{
+  background: #EB313E;
+}
+.conditionally-closed{
+  background: #1D2226;
+}
+.closed{
+  background: #00010D;
+}
+.enc-closed{
+  background: #88959D;
+}
+.for-offline-ticket{
+  background: #FF6F00;
+}
