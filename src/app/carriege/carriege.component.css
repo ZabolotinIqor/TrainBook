@@ -20,3 +20,28 @@ td{
 p{
   margin-bottom:0px;
 }
+.table_title{
+  width: 80%;
+  margin-left: 150px;
+}
+ul{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+li>p{
+  font-weight: bold;
+}
+.legendDiv{
+  display: flex;
+  flex-direction: column;
+}
+.aboutLegend{
+  display: inline-flex;
+  flex-direction: column;
+
+}
+.item{
+  display: inline-flex;
+  align-items: center;
+}

@@ -1,3 +1,14 @@
+<div class="table_title">
+  <ul>
+    <li><p>Тип вагона :{{carriege.Type}}</p></li>
+    <li><p>Трафаретный номер : {{carriege.TrafaretNumber}}</p></li>
+    <li><p>Заводской номер : {{carriege.CarriegeNumber}}</p></li>
+    <li><p>Администрация : {{carriege.Administration}}</p></li>
+  </ul>
+
+
+
+</div>
 <div class="table_box">
   <table>
     <tr *ngFor="let w of width; index as i">
@@ -7,22 +18,47 @@
     </tr>
   </table>
 </div>
-<div style="display: flex;align-items: center; justify-content: space-between;  width: 80%;margin-left: 180px;">
-  <div style="background: #63B5F4;width: 14px;height: 14px;" ></div>
-  <p>free</p>
-  <div style="background: #717073;width: 14px;height: 14px;"></div>
-  <p>busy</p>
-  <div style="background: #962E40;width: 14px;height: 14px;"></div>
-  <p>tmp booked</p>
-  <div style="background: #EB313E;width: 14px;height: 14px;"></div>
-  <p>int booked</p>
-  <div style="background: #1D2226 ;width: 14px;height: 14px;"></div>
-  <p>conditionally closed</p>
-  <div style="background: #00010D;width: 14px;height: 14px;"></div>
-  <p>closed</p>
-  <div style="background: #88959D;width: 14px;height: 14px;"></div>
-  <p>enc closed</p>
-  <div style="background: #FF6F00;width: 14px;height: 14px;"></div>
-  <p>for offline ticket</p>
+
+<button (click)="toggle()" class="btn btn-outline-info">{{btnHideName}}</button>
+<div class="legendDiv" *ngIf="hide" >
+  <div class="aboutCarriege">
+      <p>Номер вагона : {{carriege.CarriegeNumber}}</p>
+      <p>Администрация пути : {{carriege.Administration}}</p>
+  </div>
+  <div class="aboutLegend" >
+    <div class="item">
+      <div style="background: #63B5F4;width: 14px;height: 14px;" ></div>
+        <p>free</p>
+    </div>
+    <div class="item">
+    <div style="background: #717073;width: 14px;height: 14px;"></div>
+      <p>busy</p>
+    </div>
+    <div class="item">
+    <div style="background: #962E40;width: 14px;height: 14px;"></div>
+      <p>tmp booked</p>
+    </div>
+    <div class="item">
+    <div style="background: #EB313E;width: 14px;height: 14px;"></div>
+      <p>int booked</p>
+    </div>
+    <div class="item">
+    <div style="background: #1D2226 ;width: 14px;height: 14px;"></div>
+       <p>conditionally closed</p>
+    </div>
+    <div class="item">
+    <div style="background: #00010D;width: 14px;height: 14px;"></div>
+      <p>closed</p>
+    </div>
+    <div class="item">
+    <div style="background: #88959D;width: 14px;height: 14px;"></div>
+      <p>enc closed</p>
+    </div>
+    <div class="item">
+    <div style="background: #FF6F00;width: 14px;height: 14px;"></div>
+      <p>for offline ticket</p>
+      </div>
+  </div>
 </div>
+
 

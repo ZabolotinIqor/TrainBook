@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Seat } from '../models/seat';
+import { NgbTooltipConfig } from '@ng-bootstrap/ng-bootstrap';
 
 
 @Component({
@@ -15,7 +16,7 @@ export class SeatComponent implements OnInit {
   place:String;
 
 
-  constructor() {
+  constructor(config: NgbTooltipConfig) {
 
    }
 

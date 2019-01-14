@@ -1,5 +1,7 @@
+import { Carriege } from './../models/carriege';
 import { Component, OnInit } from '@angular/core';
 import { Seat } from '../models/seat';
+import { HighlightDelayBarrier } from 'blocking-proxy/built/lib/highlight_delay_barrier';
 
 @Component({
   selector: 'app-carriege',
@@ -7,12 +9,16 @@ import { Seat } from '../models/seat';
   styleUrls: ['./carriege.component.css']
 })
 export class CarriegeComponent implements OnInit {
-  id: 1;
+
+  carriege:Carriege;
   seatList: Seat[];
   condition:string;
   place:string;
   width;
   height;
+
+  hide:boolean=false;
+  btnHideName:String='Show';
 
   constructor() {
     this.width = Array(40);
@@ -26,6 +32,7 @@ export class CarriegeComponent implements OnInit {
                      new Seat(7, '13-V', 'enc-closed', 1,20,16),
                      new Seat(8, '15-J', 'for-offline-ticket', 1,18,19),
                      new Seat(9, '157-BC', 'free', 1,5,5)];
+    this.carriege= new Carriege (15,'15-DC',15,'Маммедов Мамед',16)
   }
 
   ngOnInit() {
@@ -45,6 +52,13 @@ export class CarriegeComponent implements OnInit {
     }
     this.condition='none';
     return false;
+  }
+  toggle(){
+    this.hide=!this.hide;
+    if(this.hide)
+      this.btnHideName = "Hide";
+    else
+      this.btnHideName = "Show";
   }
 
 }
